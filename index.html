@@ -9,13 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="checkLoginStatus()">
     <header>
-        <h1>Marron Story</h1>
+        <h1><a href="index.html">Marron Story</a></h1>
         <nav>
             <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="about.html">이야기들</a></li>
+                <li class="left"><a href="index.html">홈</a></li>
+                <li class="left"><a href="stories.html">이야기들</a></li>
+                <li class="right"><a href="upload.html" id="adminPageButton" style="display: none;">관리자 페이지</a></li>
+                <li class="right"><a href="login.html" id="authButton">log in</a></li>
             </ul>
         </nav>
     </header>

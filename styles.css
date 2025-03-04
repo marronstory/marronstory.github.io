@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    background: linear-gradient(to bottom, #f9f5f0, #f0e6d6); /* 매우 연한 갈색 그라데이션 색상 */
 }
 
 header {
@@ -16,18 +17,35 @@ header {
     z-index: 1000;
 }
 
+header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0;
     font-size: 1.2em;
+}
+
+nav ul li.left {
+    margin-right: 1cm; /* 왼쪽 버튼 간격 */
+}
+
+nav ul li.right {
+    margin-left: 1cm; /* 오른쪽 버튼 간격 */
+}
+
+nav ul li.right:last-child {
+    margin-right: 2rem; /* log out 버튼 오른쪽 여백 추가 */
 }
 
 nav ul li a, nav ul li span {
@@ -159,7 +177,82 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: fixed;
     width: 100%;
+    position: fixed;
     bottom: 0;
+    font-size: 0.8em;
+}
+
+.login-background, .upload-background, .stories-background, .admin-list-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login, .upload, .admin-list {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: left;
+}
+
+.login label, .upload label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1em;
+}
+
+.login input, .upload input, .upload textarea {
+    padding: 0.5rem;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login button, .upload button {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error {
+    color: red;
+    margin-top: 1rem;
+    font-size: 1em;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.vertical-line {
+    border-left: 2px solid #333;
+    height: 100%;
+}
+
+.admin-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.admin-buttons button {
+    margin-bottom: 1rem;
+}
+
+.story-item {
+    text-align: left;
+}
+
+.story-item button {
+    margin-left: 1rem;
 }

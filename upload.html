@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이야기 업로드 - Marron Story</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkLoginStatus()">
+    <header>
+        <h1><a href="index.html">Marron Story</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="stories.html">이야기들</a></li>
+                <li class="right"><a href="login.html" id="authButton">log in</a></li>
+                <li class="right" id="adminPageButton" style="display: none;"><a href="upload.html">관리자 페이지</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="upload-background">
+        <div class="upload-container">
+            <section class="upload-form">
+                <h2>이야기 업로드</h2>
+                <form id="uploadForm" onsubmit="return uploadStory()">
+                    <label for="storyTitle">제목:</label>
+                    <input type="text" id="storyTitle" name="storyTitle" required>
+                    <label for="storyContent">내용:</label>
+                    <textarea id="storyContent" name="storyContent" rows="10" required></textarea>
+                    <label for="storyPublic">
+                        전체 공개로 설정
+                        <input type="checkbox" id="storyPublic" name="storyPublic">
+                    </label>
+                    <label for="storyAdminOnly">
+                        관리자만 볼 수 있게 설정
+                        <input type="checkbox" id="storyAdminOnly" name="storyAdminOnly">
+                    </label>
+                    <button type="submit">업로드</button>
+                    <p id="uploadError" class="error"></p>
+                </form>
+            </section>
+            <div class="vertical-line"></div>
+            <section class="admin-buttons">
+                <button onclick="window.location.href='admin-list.html'">글 목록</button>
+                <button onclick="window.location.href='member-management.html'">회원 관리</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Marron Story. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
