@@ -1,0 +1,165 @@
+body {
+    font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(to bottom, #8B4513, #D2B48C);
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    font-size: 1.2em;
+}
+
+nav ul li a, nav ul li span {
+    color: #F5DEB3;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li span:hover {
+    background-color: #8B4513;
+    color: white;
+    border-radius: 5px;
+}
+
+nav ul li a:active, nav ul li span:active {
+    background-color: #A0522D;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    backdrop-filter: blur(10px);
+}
+
+.hero .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    top: 30%;
+    transform: translateY(-30%);
+}
+
+.hero-links {
+    position: relative;
+    z-index: 2;
+    margin-top: 30%;
+}
+
+.hero-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.hero-links ul li {
+    display: inline;
+    margin: 0 1rem;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.hero-links ul li a, .hero-links ul li span {
+    color: #F5DEB3;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero-links ul li a:hover, .hero-links ul li span:hover {
+    background-color: #8B4513;
+    color: white;
+    border-radius: 5px;
+}
+
+.hero-links ul li a:active, .hero-links ul li span:active {
+    background-color: #A0522D;
+}
+
+span.contact:hover::after {
+    content: ' +82 010-4934-7502';
+    display: block;
+    font-size: 0.8em;
+    margin-top: 0.5rem;
+    color: #F5DEB3;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #A0522D;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
